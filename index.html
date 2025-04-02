@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STRF Scheduler Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>STRF Scheduler (Shortest Time Remaining First)</h1>
+    <form id="jobForm">
+      <label>Number of Jobs: <input type="number" id="numJobs" required /></label>
+      <label>Number of CPUs: <input type="number" id="numCPUs" required /></label>
+      <label>Time Chunk Unit: <input type="number" id="chunkUnit" step="0.1" required /></label>
+      <button type="submit">Next</button>
+    </form>
+
+    <div id="jobInputs"></div>
+    <div id="results" class="hidden">
+      <h2>Results</h2>
+      <div id="output"></div>
+      <canvas id="ganttChart" width="1000" height="400"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
